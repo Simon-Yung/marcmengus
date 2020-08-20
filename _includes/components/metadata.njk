@@ -1,8 +1,6 @@
 <!-- ^^^^ OVERIDE BY adding DUPLICATE TAG ABOVE ^^^^ -->
 <!-- SEO tag -->
-{%- if title %}
 	<title>Marc Mengus | {{ title }}</title>
-{%- endif %}
 {%- if description %}
 	<meta name="description" content="{{ description }}" />
 {%- endif %}
@@ -22,7 +20,7 @@
 {%- if image %}
 	<meta property="og:image" content="{{ website.completeUrl }}{{ image }}">
 {%- endif %}
-<meta property="og:url" content="{{ website.completeUrl }}" />
+	<meta property="og:url" content="{{ website.completeUrl }}" />
 	<meta name="twitter:card" content="summary_large_image">
 
 
