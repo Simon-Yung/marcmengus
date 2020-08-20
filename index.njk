@@ -1,0 +1,91 @@
+---
+title: 
+layout: blank.njk
+lang: fr
+image: ""
+description: ""
+---
+<div style="background-image: url('{{ website.url }}/includes/assets/images/bg1.jpg'); height: 100vh" class="parallax">
+	<h1 class="title">MARC<br>MENGUS</h1>
+</div>
+
+<div class="blank_container">
+	<div class="text_and_image">
+		<img src="{{ website.url }}/includes/assets/images/img1.jpg">
+		<div class="text_container">
+			<h1>Cacao & Me</h1>
+			<strong>MEET CHOCOLATIER BETH BLOOMINGS</strong>
+
+			<hr>
+
+			<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.​ This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide.<p>
+
+			<p>Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p>
+		</div>
+	</div>
+</div>
+
+<div style="background-image: url('{{ website.url }}/includes/assets/images/bg2.jpg');" class="parallax ">
+</div>
+
+<div class="blank_container">
+	<div class="text_and_gallery">
+		<div class="text_container">
+			<h1>Catering & Events</h1>
+			<strong>FOR THE SWEETEST MOMENTS IN LIFE</strong>
+			<hr>
+			<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you</p>
+			<a href="">VIEW SELECTION >></a>
+		</div>
+		<div class="gallery">
+		{%- for image in collections[2020] %}
+			{%- if loop.index < 7 %}
+				<div class="thumbnails">
+					<img src="{{ website.url }}/{{image}}">
+				</div>
+			{%- endif%}
+		{%- endfor %}
+		</div>
+	</div>
+</div>
+
+<div style="background-image: url('{{ website.url }}/includes/assets/images/bg3.jpg');" class="parallax ">
+	<h1 class="white"><i>“There is nothing better than a friend, unless it is a friend with chocolate.”<i></h1>
+
+	<p class="white">- Linda Grayson -</p>
+
+</div>
+
+<div class="blank_container">
+	<div class="text_and_tall_gallery">
+		<div class="gallery">
+		{%- for image in collections[2019] %}
+			{%- if loop.index < 3 %}
+				<div class="thumbnails">
+					<img src="{{ website.url }}/{{image}}">
+				</div>
+			{%- endif%}
+		{%- endfor %}
+		</div>
+		<div class="text_container">
+			<h1>The Beans</h1>
+			<strong>QUALITY CACAO FROM AROUND THE GLOBE​</strong>
+			<hr>
+			<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.​</p>
+			<a href=""><< VIEW SELECTION</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="blank_container">
+	<div class="text_only">
+		<div class="text_container">
+			<h1>Contact Me</h1>
+			<strong>INFO@MYSITE.COM / TEL: 123-456-7890</strong>
+			<hr>
+			<p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you​</p>
+			<a href="">VOTRE MESSAGE</a>
+		</div>
+	</div>
+</div>
