@@ -18,24 +18,19 @@ html {
 
 /*text formatting*/
 
-/* <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700&display=swap" rel="stylesheet"> */
-/* font-family: 'Baloo Tamma 2', cursive; */
-
-/* <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet"> */
-/* font-family: 'PT Serif', serif; */
+/* <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap" rel="stylesheet"> */
+/* font-family: 'Source Sans Pro', sans-serif; */
 .white{
 	color: #eeeeee;
 }
 
 hr {
 	border-top: 1px solid #eeeeee;
-}
-hr{
 	width: 60px;
 	margin: 1.5rem auto 2.0rem auto;
 }
 p,b,small,big,h1,strong,span {
-	font-family: 'Baloo Tamma 2', cursive;
+	font-family: 'Source Sans Pro', sans-serif;
 	white-space:normal;
 	text-indent: 0;
 	margin: 0;
@@ -43,29 +38,29 @@ p,b,small,big,h1,strong,span {
 }
 a { 
 	text-decoration: none; 
-	font: 400 1rem/1.5 'Baloo Tamma 2', cursive;
+	font: 300 1rem/1.5 'Source Sans Pro', sans-serif;
 	color: #7073ff;
 }
 h1{
-	font: 400 2.5rem/1.25 'PT Serif', serif;
+	font: 400 2.5rem/1.25 'Source Sans Pro', sans-serif;
 	color: #444444;
 	padding-bottom: 0rem;
 	text-align: center;
 }
 p{
-	font: 400 1rem/1.5 'Baloo Tamma 2', cursive;
+	font: 300 1rem/1.5 'Source Sans Pro', sans-serif;
 	color: #444444;
 }
 span{
-	font: 400 1rem/1.5 'Baloo Tamma 2', cursive;
+	font: 300 1rem/1.5 'Source Sans Pro', sans-serif;
 	color: #444444;
 }
 strong , b{
-	font: 600 1rem/1.5 'Baloo Tamma 2', cursive;
+	font: 600 1rem/1.5 'Source Sans Pro', sans-serif;
 	color: #444444;
 }
 small{
-	font: 400 0.75rem/01.5 'Baloo Tamma 2', cursive;
+	font: 400 0.75rem/01.5 'Source Sans Pro', sans-serif;
 	color: #444444;
 }
 blockquote{
@@ -138,13 +133,25 @@ footer{
 	align-items: center;
 
 	padding: 20px;
+
+	position: relative;
 }
+.caption{
+	position: absolute;
+	bottom: 20px;
+	right: 5%;
+	padding: 0 2rem 0 2rem;
+	max-width: 80%;
+	color: #eeeeee;
+	background-color: rgba(0 , 0 , 0 , 0.8);
+}
+
 /*----------------------basic components----------------------*/
 
 .blank_container{
 	width: 100%;
 	background-color: #ffffff;
-	/* padding: 60px; */
+	padding: 60px;
 }
 .text_container{
 	display: flex;
@@ -153,9 +160,12 @@ footer{
 	align-items: center;
 	justify-content: space-evenly;
 }
+.text_container p,.text_container b,.text_container small,.text_container big,.text_container h1,.text_container strong,.text_container span{
+	text-align: center;
+}
 .text_container p{
 	margin-bottom: 1rem ;
-	text-align: center;
+	text-align: left;
 }
 
 .gallery{
@@ -167,23 +177,21 @@ footer{
 
 }
 .thumbnails{
-	height: 200px;
-	width: 200px;
-	flex: 1 1 200px;
+	/* height: 200px; */
+	/* width: 200px; */
+	flex: 0 0 1%;
 	margin: 10px;
 
 	position: relative;
 	transition: all 0.3s ease-in-out;
 }
 .thumbnails img{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	z-index: 1;
+	height: 0;
+	padding-bottom: 100%;
+	background-size: cover;
+
+	filter: brightness(1);
 	transition: all 0.3s ease-in-out;
 }
 .thumbnails:hover{
@@ -208,13 +216,17 @@ footer{
 	align-items: center;
 	justify-content: space-around;
 }/*         todo: change the no wrap for responsive design */
+.text_and_image div:nth-child(1){
+	margin-right: 60px;
+}
+.text_and_image img:nth-child(1){
+	margin-right: 60px;
+}
 .text_and_image img{
 	flex: 40%;
-	margin: 60px;
 }
 .text_and_image .text_container{
 	flex: 60%;
-	margin: 60px;
 }
 
 .text_and_gallery{
@@ -225,13 +237,21 @@ footer{
 	align-items: center;
 	justify-content: space-around;
 }
+.text_and_gallery div:nth-child(1){
+	margin-right: 60px;
+}
+.text_and_gallery img:nth-child(1){
+	margin-right: 60px;
+}
 .text_and_gallery .gallery{
 	flex: 65%;
-	margin: 60px;
+}
+.text_and_gallery .gallery .thumbnails{
+	flex: 1 1 25%;
+	margin: 10px;
 }
 .text_and_gallery .text_container{
 	flex: 35%;
-	margin: 60px;
 }
 
 .text_and_tall_gallery{
@@ -242,19 +262,24 @@ footer{
 	align-items: center;
 	justify-content: space-around;
 }
+.text_and_tall_gallery div:nth-child(1){
+	margin-right: 60px;
+}
+.text_and_tall_gallery img:nth-child(1){
+	margin-right: 60px;
+}
 .text_and_tall_gallery .gallery{
 	flex: 40%;
-	margin: 60px;
 }
 .text_and_tall_gallery .gallery .thumbnails{
-	height: 500px;
-	width: 100px;
-	flex: 1 1 100px;
+	flex: 1 1 35%;
 	margin: 10px;
+}
+.text_and_tall_gallery .gallery .thumbnails img{
+	padding-bottom: 400%;
 }
 .text_and_tall_gallery .text_container{
 	flex: 60%;
-	margin: 60px;
 }
 
 .text_only{
@@ -273,8 +298,9 @@ footer{
 
 /*----------------------background----------------------*/
 .title{
-	font-size: 120px;
-	line-height: 0.8;
+	width: 100%;
+	font: 200 50px/1.0 'Source Sans Pro', sans-serif;
+	text-align: center;
 	color: #eeeeee;
 }
 

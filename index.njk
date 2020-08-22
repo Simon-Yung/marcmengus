@@ -5,55 +5,90 @@ lang: fr
 image: ""
 description: ""
 ---
-<div style="background-image: url('{{ website.url }}/includes/assets/images/bg1.jpg'); height: 100vh" class="parallax">
-	<h1 class="title">MARC<br>MENGUS</h1>
+
+<div style="background-image: url('{{ website.url }}/includes/assets/images/bg1.jpg'); padding: 65px 0 65px 0;" class="parallax">
+	<h1 class="title">MARC MENGUS</h1>
 </div>
 
 <div class="blank_container">
 	<div class="text_and_image">
 		<img src="{{ website.url }}/includes/assets/images/img1.jpg">
 		<div class="text_container">
-			<h1>Cacao & Me</h1>
-			<strong>MEET CHOCOLATIER BETH BLOOMINGS</strong>
+			<strong>L'EXPRESSIONNISME ABSTRAIT</strong>
 
 			<hr>
 
-			<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.​ This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide.<p>
-
-			<p>Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p>
+			<p>L'expressionnisme abstrait est un mouvement artistique qui s'est développé peu après la Seconde Guerre mondiale aux États-Unis. C'est aussi un élément central de l'école de New York, « école » qui a rassemblé les artistes (poètes, peintres, musiciens...) d'avant-garde actifs à New York et aux États-Unis avant et après la Seconde Guerre mondiale. On parle d'expressionnisme abstrait pour un certain type de peinture, de sculpture et de photographie<br>
+			Le mouvement est « né » dans le milieu artistique new-yorkais dans les années 1940. Plusieurs dénominations sont apparues pour évoquer certains aspects de l'expressionnisme abstrait américain : l'action painting, la colorfield painting ou la Post-painterly Abstraction(de Sam Francis).<br>
+			Jackson Pollock (1912-1956) fut l'artiste de l'expressionnisme abstrait connu au niveau international bien avant tous les autres. Il puise son inspiration dans ses souvenirs plus ou moins traumatiques. Les dessins rituels exécutés sur le sable par les Navajos l'inspirent également ainsi que les totems des Indiens de la côte Ouest, faits d'assemblages de figures composites ; de même les fresquistes mexicains par leurs formats et pour les expérimentations auxquelles ils se risquent ; les dessins et les peintures de Picasso (de l'époque de Guernica, de Marie-Thérèse et du Minotaure) aux figures déformées ; enfin, l'écriture automatique surréaliste le concerne moins que l'interprétation de ses dessins qu'il effectue avec son psychanalyste formé auprès de Jung. Pollock utilise, entre autres, la technique du dripping qui consiste à faire gicler de la peinture du bout d'un bâton ; il verse aussi la peinture directement du pot sur de grandes toiles disposées au sol. Il emploie des outils non conventionnels pour peindre (couteaux, truelle, bâton, seringue).<!--<br>
+			Franz Kline (1910-1962) produit de vastes surfaces noires ou blanches très instinctives. Il utilise des fragments de ses propres dessins qu'il agrandit et reporte sur des grands formats. Il privilégie le contraste du noir et du blanc favorisé par des bandes de peinture.<br>
+			Bien que Willem de Kooning (1904-1997) refuse d'être classé dans l'expressionnisme abstrait29, ses œuvres majeures (Excavation ou Woman I de 1950) relèvent, pour ses contemporains, de cette tendance. En effet, la défiguration poussée, grotesque, jointe à une structure « post-cubiste », qui tend à unifier le tableau tout en s'abstenant de tout effet de représentation du volume, poussent les formes encore identifiables vers l'abstraction et le tableau vers la planéité. L'expressionnisme avec lequel les « Femmes » (américaines modernes) sont représentées les amène à ressembler à des idoles néolithiques.<br>
+			Mark Rothko (1903-1970), dans sa période "classique", peint des bandes plus ou moins larges et mitoyennes de couleurs intenses sur des toiles de plus en plus grandes qui invitent à la contemplation ou à la méditation. Avec Barnett Newman, Clyfford Still et Ad Reinhardt, il devient l'un des artistes les plus représentatifs de la colorfield painting --></p>
 		</div>
 	</div>
 </div>
 
-<div style="background-image: url('{{ website.url }}/includes/assets/images/bg2.jpg');" class="parallax ">
+<div id="bg2" style="background-image: url('{{ website.url }}/includes/assets/images/bg2s.jpg');" 
+data-lazy-load="{{ website.url }}/includes/assets/images/bg2.jpg"
+class="parallax lazyLoad">
+	<b class="caption">"Convergence" , 1952 - Jackson Pollock </b>
 </div>
-
+<!--1-->
 <div class="blank_container">
 	<div class="text_and_gallery">
 		<div class="text_container">
-			<h1>Catering & Events</h1>
-			<strong>FOR THE SWEETEST MOMENTS IN LIFE</strong>
+			<strong>Marc Mengus est un peintre expressionniste abstrait.</strong>
 			<hr>
-			<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you</p>
+			<p>Il met en valeur la matière et la couleur utilisée comme matière.<br>
+			Ses œuvres sont toutes empreintes d’un climat qui autorise de se laisser inspirer par l’intérieur du tableau.<br>
+			Les œuvres ne portent intentionnellement pas de nom ; aucune influence étymologie ou sémiotique ne doit ancrer l’imaginaire, qui doit demeurer libre.<br>
+			Né en 1959 à Strasbourg, Marc Mengus s’est établi dans un petit village au sud de l’Alsace.<br>
+			C’est là, proche de la nature, au calme, loin de bruits intempestifs qu'il travaille. </p>
 			<a href="">VIEW SELECTION >></a>
 		</div>
 		<div class="gallery">
 		{%- for image in collections[2020] %}
-			{%- if loop.index < 7 %}
+			{%- if loop.index <= 9 %}
 				<div class="thumbnails">
-					<img src="{{ website.url }}/{{image}}">
+					<img style="background-image: url('{{ website.url }}/{{image}}')">
 				</div>
-			{%- endif%}
+			{%- endif %}
 		{%- endfor %}
 		</div>
 	</div>
 </div>
 
+<div id="bg2" style="background-image: url('{{ website.url }}/includes/assets/images/bg2s.jpg');" 
+data-lazy-load="{{ website.url }}/includes/assets/images/bg2.jpg"
+class="parallax lazyLoad">
+	<b class="caption">"Convergence" , 1952 - Jackson Pollock </b>
+</div>
+<!--2-->
+<div class="blank_container">
+	<div class="text_and_gallery">
+		<div class="gallery">
+		{%- for image in collections[2019] %}
+			{%- if loop.index <= 9 %}
+				<div class="thumbnails">
+					<img style="background-image: url('{{ website.url }}/{{image}}')">
+				</div>
+			{%- endif %}
+		{%- endfor %}
+		</div>
+		<div class="text_container">
+			<strong>Marc Mengus est un peintre expressionniste abstrait.</strong>
+			<hr>
+			<p>Il met en valeur la matière et la couleur utilisée comme matière.<br>
+			Ses œuvres sont toutes empreintes d’un climat qui autorise de se laisser inspirer par l’intérieur du tableau.<br>
+			Les œuvres ne portent intentionnellement pas de nom ; aucune influence étymologie ou sémiotique ne doit ancrer l’imaginaire, qui doit demeurer libre.<br>
+			Né en 1959 à Strasbourg, Marc Mengus s’est établi dans un petit village au sud de l’Alsace.<br>
+			C’est là, proche de la nature, au calme, loin de bruits intempestifs qu'il travaille. </p>
+			<a href="">VIEW SELECTION >></a>
+		</div>
+	</div>
+</div>
+
 <div style="background-image: url('{{ website.url }}/includes/assets/images/bg3.jpg');" class="parallax ">
-	<h1 class="white"><i>“There is nothing better than a friend, unless it is a friend with chocolate.”<i></h1>
-
-	<p class="white">- Linda Grayson -</p>
-
 </div>
 
 <div class="blank_container">
@@ -62,9 +97,9 @@ description: ""
 		{%- for image in collections[2019] %}
 			{%- if loop.index < 3 %}
 				<div class="thumbnails">
-					<img src="{{ website.url }}/{{image}}">
+					<img style="background-image: url('{{ website.url }}/{{image}}')">
 				</div>
-			{%- endif%}
+			{%- endif %}
 		{%- endfor %}
 		</div>
 		<div class="text_container">
@@ -89,3 +124,15 @@ description: ""
 		</div>
 	</div>
 </div>
+
+
+<script>
+	function lazyLoad(){
+		let array = document.getElementsByClassName('lazyLoad');
+		for (i = 0; i < array.length; i++) {
+			array[i].style.backgroundImage = "url(" + array[i].dataset.lazyLoad + ")";
+			console.log("url(" + array[i].dataset.lazyLoad + ")");
+		}
+	}
+	document.onload = lazyLoad();
+</script>
