@@ -6,6 +6,7 @@ image: ""
 description: ""
 ---
 
+
 <div style="background-image: url('{{ website.url }}/includes/assets/images/bg1.jpg'); padding: 65px 0 65px 0;" class="parallax">
 	<h1 class="title">MARC MENGUS</h1>
 </div>
@@ -13,7 +14,7 @@ description: ""
 <div class="blank_container">
 	<div class="text_and_image">
 		<img src="{{ website.url }}/includes/assets/images/img1.jpg">
-		<div class="text_container">
+		<div class="text_container" id="definition">
 			<strong>L'EXPRESSIONNISME ABSTRAIT</strong>
 
 			<hr>
@@ -34,7 +35,7 @@ class="parallax lazyLoad">
 	<b class="caption">"Convergence" , 1952 - Jackson Pollock </b>
 </div>
 <!--1-->
-<div class="blank_container">
+<div class="blank_container" id="gallery1">
 	<div class="text_and_gallery">
 		<div class="text_container">
 			<strong>Marc Mengus est un peintre expressionniste abstrait.</strong>
@@ -47,10 +48,15 @@ class="parallax lazyLoad">
 			<a href="">VIEW SELECTION >></a>
 		</div>
 		<div class="gallery">
-		{%- for image in collections[2020] %}
+		{%- set offset = 0 %}
+		{%- for image in collections['c'] %}
 			{%- if loop.index <= 9 %}
+				{%- set offset = offset + 1 %}
 				<div class="thumbnails">
-					<img style="background-image: url('{{ website.url }}/{{image}}')">
+					<div class="square">
+						<img src="{{ website.url }}/{{ image }}" 
+						id="{{ offset }}" onclick="openModalGallery( {{ offset }} )" >
+					</div>
 				</div>
 			{%- endif %}
 		{%- endfor %}
@@ -67,10 +73,14 @@ class="parallax lazyLoad">
 <div class="blank_container">
 	<div class="text_and_gallery">
 		<div class="gallery">
-		{%- for image in collections[2019] %}
+		{%- for image in collections['b'] %}
 			{%- if loop.index <= 9 %}
+				{%- set offset = offset + 1 %}
 				<div class="thumbnails">
-					<img style="background-image: url('{{ website.url }}/{{image}}')">
+					<div class="square">
+						<img src="{{ website.url }}/{{ image }}" 
+						id="{{ offset }}" onclick="openModalGallery( {{ offset }} )" >
+					</div>
 				</div>
 			{%- endif %}
 		{%- endfor %}
@@ -92,12 +102,16 @@ class="parallax lazyLoad">
 </div>
 
 <div class="blank_container">
-	<div class="text_and_tall_gallery">
+	<div class="text_and_gallery">
 		<div class="gallery">
-		{%- for image in collections[2019] %}
-			{%- if loop.index < 3 %}
+		{%- for image in collections['a'] %}
+			{%- if loop.index <= 2 %}
+				{%- set offset = offset + 1 %}
 				<div class="thumbnails">
-					<img style="background-image: url('{{ website.url }}/{{image}}')">
+					<div class="square">
+						<img src="{{ website.url }}/{{ image }}" 
+						id="{{ offset }}" onclick="openModalGallery( {{ offset }} )" >
+					</div>
 				</div>
 			{%- endif %}
 		{%- endfor %}
@@ -113,7 +127,7 @@ class="parallax lazyLoad">
 </div>
 
 
-<div class="blank_container">
+<div class="blank_container" id="contact">
 	<div class="text_only">
 		<div class="text_container">
 			<h1>Contact Me</h1>

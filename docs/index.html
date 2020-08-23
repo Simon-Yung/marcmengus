@@ -3,6 +3,7 @@
 	<head>
 		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://simon-yung.github.io/marcmengus/includes/assets/css/styles.css">
+		<script src="https://simon-yung.github.io/marcmengus/includes/assets/js/modal_gallery.js" defer> </script>
 		<!-- ^^^^ OVERIDE BY adding DUPLICATE TAG ABOVE ^^^^ -->
 <!-- SEO tag -->
 	<title>Marc Mengus | </title>
@@ -33,18 +34,19 @@
 -->
 	</head>
 	<body class=""> 
-		<header>
+		<header id="top">
 	<nav id="navbar">
 		<ul>
-			<li><a href="">HOME</a></li>
-			<li><a href="">MENU</a></li>
-			<li><a href="">ONLINE&nbsp;ORDERING</a></li>
-			<li><a href="">CONTACT&nbsp;US</a></li>
+			<li><a href="#top">MARC&nbsp;MENGUS</a></li>
+			<li><a href="#definition">DÉFINITION</a></li>
+			<li><a href="#gallery1">OEUVRES</a></li>
+			<li><a href="#contact">CONTACT</a></li>
 		</ul>
 	</nav>
 </header>
 
 		
+
 <div style="background-image: url('https://simon-yung.github.io/marcmengus/includes/assets/images/bg1.jpg'); padding: 65px 0 65px 0;" class="parallax">
 	<h1 class="title">MARC MENGUS</h1>
 </div>
@@ -52,7 +54,7 @@
 <div class="blank_container">
 	<div class="text_and_image">
 		<img src="https://simon-yung.github.io/marcmengus/includes/assets/images/img1.jpg">
-		<div class="text_container">
+		<div class="text_container" id="definition">
 			<strong>L'EXPRESSIONNISME ABSTRAIT</strong>
 
 			<hr>
@@ -73,7 +75,7 @@ class="parallax lazyLoad">
 	<b class="caption">"Convergence" , 1952 - Jackson Pollock </b>
 </div>
 <!--1-->
-<div class="blank_container">
+<div class="blank_container" id="gallery1">
 	<div class="text_and_gallery">
 		<div class="text_container">
 			<strong>Marc Mengus est un peintre expressionniste abstrait.</strong>
@@ -87,31 +89,40 @@ class="parallax lazyLoad">
 		</div>
 		<div class="gallery">
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2020/thumbnails/MarcMengus-2020-13---100.70---Acrylique-sur-Toile-de-Lin---1000.jpg')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/c/thumbnails/C-MarcMengus-2019-10-30.30---Acrylique-sur-Toile-de-Lin---500.jpg" 
+						id="1" onclick="openModalGallery( 1 )" >
+					</div>
 				</div>
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2020/thumbnails/MarcMengus-2020-15--40.120---Acrylique-sur-Toile-de-Lin.jpg')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/c/thumbnails/C-MarcMengus-2020-15--40.120---Acrylique-sur-Toile-de-Lin.jpg" 
+						id="2" onclick="openModalGallery( 2 )" >
+					</div>
 				</div>
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2020/thumbnails/MarcMengus-2020-2---50.50---Acrylique-sur-Toile-de-Lin---800.jpg')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/c/thumbnails/C-MarcMengus-2020-27---100.70---Acrylique-sur-Toile-de-Lin--1200.jpg" 
+						id="3" onclick="openModalGallery( 3 )" >
+					</div>
 				</div>
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2020/thumbnails/MarcMengus-2020-20-50.50---Acrylique-sur-Toile-de-Lin---600.jpg')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/c/thumbnails/C-MarcMengus-2020-29---100.70---Acrylique-sur-Toile-de-Lin---1200.jpg" 
+						id="4" onclick="openModalGallery( 4 )" >
+					</div>
 				</div>
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2020/thumbnails/MarcMengus-2020-21-50.50---Acrylique-sur-Toile-de-Lin---600.jpg')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/c/thumbnails/C-MarcMengus-2020-30---100.70---Acrylique-sur-Toile-de-Lin---1200.jpg" 
+						id="5" onclick="openModalGallery( 5 )" >
+					</div>
 				</div>
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2020/thumbnails/MarcMengus-2020-22-100.70---Acrylique-sur-Toile-de-Lin---1200.jpg')">
-				</div>
-				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2020/thumbnails/MarcMengus-2020-25---100.70---Acrylique-sur-Toile-de-Lin--1200.jpg')">
-				</div>
-				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2020/thumbnails/MarcMengus-2020-27---100.70---Acrylique-sur-Toile-de-Lin--1200.jpg')">
-				</div>
-				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2020/thumbnails/MarcMengus-2020-28---120.80---Acrylique-sur-Toile-de-Lin--1500.jpg')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/c/thumbnails/C-MarcMengus-2020-32---80.80---Acrylique-sur-Toile-de-Lin---1000.jpg" 
+						id="6" onclick="openModalGallery( 6 )" >
+					</div>
 				</div>
 		</div>
 	</div>
@@ -127,31 +138,40 @@ class="parallax lazyLoad">
 	<div class="text_and_gallery">
 		<div class="gallery">
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2019/thumbnails/MarcMengus-2019-1-70.50---Acrylique-sur-Toile-de-Lin---600.jpg')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/b/thumbnails/B-MarcMengus-2019-14--74.50---Acrylique-sur-Toile-de-Lin---800.jpg" 
+						id="7" onclick="openModalGallery( 7 )" >
+					</div>
 				</div>
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2019/thumbnails/MarcMengus-2019-10-30.30---Acrylique-sur-Toile-de-Lin---500.jpg')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/b/thumbnails/B-MarcMengus-2019-4-65.92---Acrylique-sur-Toile-de-Lin---800.jpg" 
+						id="8" onclick="openModalGallery( 8 )" >
+					</div>
 				</div>
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2019/thumbnails/MarcMengus-2019-13---80.80---Acrylique-sur-Toile-de-Lin---1000.jpg')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/b/thumbnails/B-MarcMengus-2019-6-65.92---Acrylique-sur-Toile-de-Lin---800.jpg" 
+						id="9" onclick="openModalGallery( 9 )" >
+					</div>
 				</div>
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2019/thumbnails/MarcMengus-2019-14--74.50---Acrylique-sur-Toile-de-Lin---800.jpg')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/b/thumbnails/B-MarcMengus-2019-7-65.92---Acrylique-sur-Toile-de-Lin---800.jpg" 
+						id="10" onclick="openModalGallery( 10 )" >
+					</div>
 				</div>
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2019/thumbnails/MarcMengus-2019-4-65.92---Acrylique-sur-Toile-de-Lin---800.jpg')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/b/thumbnails/B-MarcMengus-2020-22-100.70---Acrylique-sur-Toile-de-Lin---1200.jpg" 
+						id="11" onclick="openModalGallery( 11 )" >
+					</div>
 				</div>
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2019/thumbnails/MarcMengus-2019-6-65.92---Acrylique-sur-Toile-de-Lin---800.jpg')">
-				</div>
-				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2019/thumbnails/MarcMengus-2019-7-65.92---Acrylique-sur-Toile-de-Lin---800.jpg')">
-				</div>
-				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2019/thumbnails/zzzzzzzz.png')">
-				</div>
-				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2019/thumbnails/zzzzzzzzzzzz.png')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/b/thumbnails/B-MarcMengus-2020-28---120.80---Acrylique-sur-Toile-de-Lin--1500.jpg" 
+						id="12" onclick="openModalGallery( 12 )" >
+					</div>
 				</div>
 		</div>
 		<div class="text_container">
@@ -171,13 +191,19 @@ class="parallax lazyLoad">
 </div>
 
 <div class="blank_container">
-	<div class="text_and_tall_gallery">
+	<div class="text_and_gallery">
 		<div class="gallery">
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2019/thumbnails/MarcMengus-2019-1-70.50---Acrylique-sur-Toile-de-Lin---600.jpg')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/a/thumbnails/A-MarcMengus-2018-1-60.60---Acrylique-sur-Toile-de-Lin---600.jpg" 
+						id="13" onclick="openModalGallery( 13 )" >
+					</div>
 				</div>
 				<div class="thumbnails">
-					<img style="background-image: url('https://simon-yung.github.io/marcmengus/gallery/2019/thumbnails/MarcMengus-2019-10-30.30---Acrylique-sur-Toile-de-Lin---500.jpg')">
+					<div class="square">
+						<img src="https://simon-yung.github.io/marcmengus/gallery/a/thumbnails/A-MarcMengus-2020-13---100.70---Acrylique-sur-Toile-de-Lin---1000.jpg" 
+						id="14" onclick="openModalGallery( 14 )" >
+					</div>
 				</div>
 		</div>
 		<div class="text_container">
@@ -191,7 +217,7 @@ class="parallax lazyLoad">
 </div>
 
 
-<div class="blank_container">
+<div class="blank_container" id="contact">
 	<div class="text_only">
 		<div class="text_container">
 			<h1>Contact Me</h1>
@@ -219,5 +245,22 @@ class="parallax lazyLoad">
 	<p class="white">©2023 by Chocolate de rêves. Proudly created with <a href="">Wix.com</a></p>
 </footer>
 <!--div class="back_to_top" onclick="window.scrollTo({ top: 0, left: 0, behavior: 'smooth'});"><span></span></div>-->
+		<div id="modal_window" class="modal_window">
+	<img src="https://simon-yung.github.io/marcmengus/includes/assets/images/load.png" id="spinner" class="spinner spinning">
+	<div class="modal_image_container" id="modal_image_container">
+		<img id="modal_image" class="modal_image"  src="">
+	</div>
+
+	<div id="previous" class="previous button "><span> &#171; </span></div>
+	<div id="next" class="next button "><span> &#187; </span></div>
+	<div id="close" class="close button "><span> &#x2573; </span></div>
+		
+	<div id="contextual_menu">
+		<span id="menu_previous" >Previous</span>
+		<span id="menu_next" >Next</span>
+		<span id="menu_close" >Close</span>
+	</div>
+</div>
+
 	</body>
 </html>

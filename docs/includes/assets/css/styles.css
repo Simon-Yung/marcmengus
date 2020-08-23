@@ -151,9 +151,10 @@ footer{
 .blank_container{
 	width: 100%;
 	background-color: #ffffff;
-	padding: 60px;
+	padding: 5%;
 }
 .text_container{
+	min-width: 300px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -169,6 +170,7 @@ footer{
 }
 
 .gallery{
+	min-width: 300px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -181,23 +183,40 @@ footer{
 	/* width: 200px; */
 	flex: 0 0 1%;
 	margin: 10px;
+	background-color: rgba(0 , 0 , 0 , 0.1);
 
-	position: relative;
+	filter: brightness(1);
 	transition: all 0.3s ease-in-out;
 }
-.thumbnails img{
+.thumbnails .square{
 	width: 100%;
 	height: 0;
 	padding-bottom: 100%;
+	margin: 0;
 	background-size: cover;
-
-	filter: brightness(1);
+	background-position: center;
+	position: relative;
+}
+.thumbnails .square img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	object-fit: cover;
 	transition: all 0.3s ease-in-out;
 }
 .thumbnails:hover{
 	filter: brightness(0.5);
 	transition: all 0.3s ease-in-out;
 }
+.thumbnails:hover img{
+	object-fit: scale-down;
+	object-position: center;
+	transition: all 0.3s ease-in-out;
+}
+
 
 .big_gallery{
 	display: flex;
@@ -212,39 +231,39 @@ footer{
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
 }/*         todo: change the no wrap for responsive design */
 .text_and_image div:nth-child(1){
-	margin-right: 60px;
+	margin-right: 5%;
 }
 .text_and_image img:nth-child(1){
-	margin-right: 60px;
+	margin-right: 5%;
 }
 .text_and_image img{
 	flex: 40%;
 }
 .text_and_image .text_container{
-	flex: 60%;
+	flex: 55%;
 }
 
 .text_and_gallery{
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
 }
 .text_and_gallery div:nth-child(1){
-	margin-right: 60px;
+	margin-right: 5%;
 }
 .text_and_gallery img:nth-child(1){
-	margin-right: 60px;
+	margin-right: 5%;
 }
 .text_and_gallery .gallery{
-	flex: 65%;
+	flex: 60%;
 }
 .text_and_gallery .gallery .thumbnails{
 	flex: 1 1 25%;
@@ -258,15 +277,15 @@ footer{
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
 }
 .text_and_tall_gallery div:nth-child(1){
-	margin-right: 60px;
+	margin-right: 5%;
 }
 .text_and_tall_gallery img:nth-child(1){
-	margin-right: 60px;
+	margin-right: 5%;
 }
 .text_and_tall_gallery .gallery{
 	flex: 40%;
@@ -279,7 +298,7 @@ footer{
 	padding-bottom: 400%;
 }
 .text_and_tall_gallery .text_container{
-	flex: 60%;
+	flex: 55%;
 }
 
 .text_only{
@@ -322,7 +341,7 @@ footer{
 	height: 100%;
 	max-height: 100%;
 	/* padding: 20px 20px 20px 20px; doesn't work on google chrome*/
-	background-color: rgba(0 , 0 , 0 , 0.3);
+	background-color: rgba(0 , 0 , 0 , 0.9);
 }
 .modal_image_container{/* FUCK YOU GOOGLE CHROME */
 	padding: 20px;

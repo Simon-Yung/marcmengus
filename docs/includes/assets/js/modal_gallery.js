@@ -1,7 +1,7 @@
 
 // Get the gallery by id
 const gallery = document.getElementById('gallery');
-const numberOfImage = document.getElementsByClassName('preview').length;
+const numberOfImage = document.getElementsByClassName('thumbnails').length;
 var currentImage;
 var modalIsOpen = false;
 
@@ -43,18 +43,19 @@ function openModalGallery(imageIDNumber) {
 	//looking back , i could have just used an array instead of this id system, oh well...
 	modalIsOpen = true;
 	//check if image id is within bound, wrap around if not
+	console.log(imageIDNumber);
 	imageIDNumber = parseInt(imageIDNumber);
 	if ( imageIDNumber == 0 ) { imageIDNumber = numberOfImage; }
 	if ( imageIDNumber > numberOfImage ) { imageIDNumber = 1; }
 	//get the thumbnail by id
+	console.log(imageIDNumber);
 	let img;
 	img = document.getElementById(imageIDNumber);
 	//start spinner
 	spinIt();
 	//change image, open the modal
 	modal.style.display = "flex";
-	pagination.innerHTML = img.dataset.pagination;
-	image.src = img.src.replace("/thumbnails", "/larges").replace("/larges");
+	image.src = img.src.replace("/thumbnails", "/larges");
 	currentImage = imageIDNumber;
 
 	//prevent scrolling on modal
