@@ -43,25 +43,25 @@ a {
 }
 h1{
 	font: 400 2.5rem/1.25 'Source Sans Pro', sans-serif;
-	color: #444444;
+	color: #eeeeee;
 	padding-bottom: 0rem;
 	text-align: center;
 }
 p{
 	font: 300 1rem/1.5 'Source Sans Pro', sans-serif;
-	color: #444444;
+	color: #eeeeee;
 }
 span{
 	font: 300 1rem/1.5 'Source Sans Pro', sans-serif;
-	color: #444444;
+	color: #eeeeee;
 }
 strong , b{
 	font: 600 1rem/1.5 'Source Sans Pro', sans-serif;
-	color: #444444;
+	color: #eeeeee;
 }
 small{
 	font: 400 0.75rem/01.5 'Source Sans Pro', sans-serif;
-	color: #444444;
+	color: #eeeeee;
 }
 blockquote{
 	margin: 10px;
@@ -105,7 +105,7 @@ header{
 /*----------------------footer----------------------*/
 footer{
 	height: 40px;
-	background-color: #756F63;
+	background-color: #292929;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -122,7 +122,7 @@ footer{
 	max-height: 500px;
 	max-height: 900px;
 	background-attachment: fixed;
-	background-position: top;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -150,7 +150,7 @@ footer{
 
 .blank_container{
 	width: 100%;
-	background-color: #ffffff;
+	background-color: #504b4b;
 	padding: 5%;
 }
 .text_container{
@@ -226,6 +226,23 @@ footer{
 	justify-content: flex-start;
 }
 /*----------------------composed components----------------------*/
+.text_and_text{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+.text_and_text div:nth-child(1){
+	margin-right: 5%;
+}
+.text_and_text .text_container{
+	flex: 47%;
+}
+.text_and_text .text_container p{
+	text-align: justify;
+}
 
 .text_and_image{
 	width: 100%;
@@ -243,6 +260,7 @@ footer{
 }
 .text_and_image img{
 	flex: 40%;
+	width: 40%;
 }
 .text_and_image .text_container{
 	flex: 55%;
@@ -302,7 +320,7 @@ footer{
 }
 
 .text_only{
-	background-color: #F4F3F2;
+	background-color: #292929;
 	width: 100%;
 	height: 100%;
 	padding: 60px;
@@ -317,10 +335,11 @@ footer{
 
 /*----------------------background----------------------*/
 .title{
-	width: 100%;
+	padding: 0 20px 0 20px;
 	font: 200 50px/1.0 'Source Sans Pro', sans-serif;
 	text-align: center;
 	color: #eeeeee;
+	background-color: rgba(0 , 0 , 0 , 0.1);
 }
 
 /*----------------------modal----------------------*/
@@ -431,4 +450,29 @@ footer{
 	50% {transform:rotate(180deg);}
 	75% {transform:rotate(90deg);}
 	100% {transform:rotate(0deg);}
+}
+/*menu thingy*/
+#contextual_menu{
+	z-index: 13;
+	position: fixed;
+	top: 100%;
+	left: 100%;
+	display: none;
+	background-color: #333333;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+#contextual_menu span{
+	padding: 2px 10px 2px 10px;
+
+	cursor: pointer;
+
+	-webkit-user-select: none; /* Safari */		
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+#contextual_menu span:hover{
+	color: #000000;
+	background-color: #eeeeee;
 }
