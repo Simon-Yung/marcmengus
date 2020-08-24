@@ -11,6 +11,10 @@ const modal = document.getElementById('modal_window');
 const imageContainer = document.getElementById('modal_image_container');
 const image = document.getElementById('modal_image');
 
+//those are the title bar elements
+const imageTitle = document.getElementById('image_title');
+const PurchaseLinkText = document.getElementById('purchase_link_text');
+
 //those are the control bar elements
 const previous = document.getElementById('previous');
 const next = document.getElementById('next');
@@ -53,6 +57,9 @@ function openModalGallery(imageIDNumber) {
 	img = document.getElementById(imageIDNumber);
 	//start spinner
 	spinIt();
+	//upadte title bar
+	imageTitle.innerHTML = img.dataset.title;
+	PurchaseLinkText.href = '#' ;//img.dataset.link;
 	//change image, open the modal
 	modal.style.display = "flex";
 	image.src = img.src.replace("/thumbnails", "/larges");
