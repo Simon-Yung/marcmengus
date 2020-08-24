@@ -459,8 +459,8 @@ footer{
 	transform: translateY(-50%);
 }
 .next span{
-	height: 30px;
-	width: 30px;
+	height: 15px;
+	width: 15px;
 	border-top: 1px solid white;
 	border-right: 1px solid white;
 	transform-origin: center;
@@ -473,8 +473,8 @@ footer{
 	transform: translateY(-50%);
 }
 .previous span{
-	height: 30px;
-	width: 30px;
+	height: 15px;
+	width: 15px;
 	border-top: 1px solid white;
 	border-left: 1px solid white;
 	transform-origin: center;
@@ -486,7 +486,7 @@ footer{
 	top: 10px;
 }
 .close span{
-	font: 300 32px/1 'Baloo Tamma 2', sans-serif;
+	font: 300 16px/1 'Baloo Tamma 2', sans-serif;
 	color: #ffffff;
 }
 .spinner{
