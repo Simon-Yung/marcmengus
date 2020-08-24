@@ -14,6 +14,7 @@ const image = document.getElementById('modal_image');
 //those are the title bar elements
 const imageTitle = document.getElementById('image_title');
 const PurchaseLinkText = document.getElementById('purchase_link_text');
+const PurchaseLink = document.getElementById('purchase_link');
 
 //those are the control bar elements
 const previous = document.getElementById('previous');
@@ -47,19 +48,18 @@ function openModalGallery(imageIDNumber) {
 	//looking back , i could have just used an array instead of this id system, oh well...
 	modalIsOpen = true;
 	//check if image id is within bound, wrap around if not
-	console.log(imageIDNumber);
 	imageIDNumber = parseInt(imageIDNumber);
 	if ( imageIDNumber == 0 ) { imageIDNumber = numberOfImage; }
 	if ( imageIDNumber > numberOfImage ) { imageIDNumber = 1; }
 	//get the thumbnail by id
-	console.log(imageIDNumber);
 	let img;
 	img = document.getElementById(imageIDNumber);
 	//start spinner
 	spinIt();
 	//upadte title bar
 	imageTitle.innerHTML = img.dataset.title;
-	PurchaseLinkText.href = '#' ;//img.dataset.link;
+	PurchaseLink.href = img.dataset.href;
+
 	//change image, open the modal
 	modal.style.display = "flex";
 	image.src = img.src.replace("/thumbnails", "/larges");

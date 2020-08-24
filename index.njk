@@ -7,14 +7,14 @@ description: ""
 ---
 <div style="background-image: url('{{ website.url }}/includes/assets/images/bg1s.jpg'); height: 100vh; padding: 65px 0 65px 0;"
 data-lazy-load="{{ website.url }}/includes/assets/images/bg1.jpg" class="parallax lazyLoad">
-	<h1 class="title">MARC MENGUS,<br> Artist Peintre Français</h1>
-	<b class="caption">"15" , 2020 - Jackson Pollock</b>
+	<h1 class="title">Marc Mengus,<br> Artist Peintre Français</h1>
+	<b class="caption">2020#15</b>
 </div>
 
 <div class="blank_container">
 	<div class="text_and_text" id="definition">
 		<div class="text_container left_container">
-			<strong>L'EXPRESSIONNISME ABSTRAIT</strong>
+			<strong>L'Expressionnisme Abstrait</strong>
 
 			<hr>
 
@@ -26,10 +26,10 @@ data-lazy-load="{{ website.url }}/includes/assets/images/bg1.jpg" class="paralla
 			Franz Kline (1910-1962) produit de vastes surfaces noires ou blanches très instinctives. Il utilise des fragments de ses propres dessins qu'il agrandit et reporte sur des grands formats. Il privilégie le contraste du noir et du blanc favorisé par des bandes de peinture.<br>
 			Bien que Willem de Kooning (1904-1997) refuse d'être classé dans l'expressionnisme abstrait29, ses œuvres majeures (Excavation ou Woman I de 1950) relèvent, pour ses contemporains, de cette tendance. En effet, la défiguration poussée, grotesque, jointe à une structure « post-cubiste », qui tend à unifier le tableau tout en s'abstenant de tout effet de représentation du volume, poussent les formes encore identifiables vers l'abstraction et le tableau vers la planéité. L'expressionnisme avec lequel les « Femmes » (américaines modernes) sont représentées les amène à ressembler à des idoles néolithiques.<br>
 			Mark Rothko (1903-1970), dans sa période "classique", peint des bandes plus ou moins larges et mitoyennes de couleurs intenses sur des toiles de plus en plus grandes qui invitent à la contemplation ou à la méditation. Avec Barnett Newman, Clyfford Still et Ad Reinhardt, il devient l'un des artistes les plus représentatifs de la colorfield painting --></p>
-			<a href="">Voir l'article sur Wikipedia</a>
+			<a href="https://fr.wikipedia.org/wiki/Expressionnisme_abstrait">Source: Wikipedia</a>
 		</div>
 		<div class="text_container">
-			<strong>ABSTRACT EXPRESSIONISM</strong>
+			<strong>Abstract Expressionism</strong>
 
 			<hr>
 
@@ -39,7 +39,7 @@ data-lazy-load="{{ website.url }}/includes/assets/images/bg1.jpg" class="paralla
 			<p>
 			Jackson Pollock (1912-1956) was the first internationally known Abstract Expressionist artist. He drew his inspiration from his more or less traumatic memories. He was also inspired by the ritual drawings executed on sand by the Navajo, by the totems of the West Coast Indians, made of composite figure assemblages, and by the Mexican fresco artists for their formats and the experiments they ventured into; Picasso's drawings and paintings (from the times of Guernica, Marie-Thérèse and the Minotaur) with their distorted figures;<!-- finally, surrealist automatic writing concerns him less than the interpretation of his drawings that he carries out with his psychoanalyst trained with Jung. Pollock uses, among other things, the dripping technique, which consists of squirting paint from the end of a stick; he also pours the paint directly from the pot onto large canvases on the ground. He uses unconventional tools to paint (knives, trowel, stick, syringe).-->
 			</p>
-			<a href="">Learn more on Wikipedia</a>
+			<a href="https://en.wikipedia.org/wiki/Abstract_expressionism">Source: Wikipedia</a>
 		</div>
 	</div>
 </div>
@@ -64,14 +64,15 @@ class="parallax lazyLoad">
 		</div>
 		<div class="gallery">
 		{%- set offset = 0 %}
-		{%- for image in collections['c'] %}
+		{%- for image in group.c.images %}
 			{%- if loop.index <= 9 %}
 				{%- set offset = offset + 1 %}
 				<div class="thumbnails">
 					<div class="square">
-						<img src="{{ website.url }}/{{ image }}" 
+						<img src="{{ website.url }}{{ group.c.baseSrc }}{{ image.src }}" 
 						id="{{ offset }}" onclick="openModalGallery( {{ offset }} )" 
-						data-title="{{ image | replace('gallery/c', '') | replace('/thumbnails/', '  ') | replace('.jpg', '') | replace('_', '  ') | replace('-', '#') }}">
+						data-title="{{ image.title }}"
+						data-href="{{ image.href }}">
 					</div>
 				</div>
 			{%- endif %}
@@ -83,20 +84,21 @@ class="parallax lazyLoad">
 <div id="bg3" style="background-image: url('{{ website.url }}/includes/assets/images/bg3s.jpg');" 
 data-lazy-load="{{ website.url }}/includes/assets/images/bg3.jpg"
 class="parallax lazyLoad">
-	<b class="caption">"32" , 2020 - Marc Mengus</b>
+	<b class="caption">2020#32</b>
 </div>
 <!--2-->
 <div class="blank_container" id="gallery2">
 	<div class="text_and_gallery">
 		<div class="gallery left_container">
-		{%- for image in collections['b'] %}
+		{%- for image in group.b.images %}
 			{%- if loop.index <= 9 %}
 				{%- set offset = offset + 1 %}
 				<div class="thumbnails">
 					<div class="square">
-						<img src="{{ website.url }}/{{ image }}" 
-						id="{{ offset }}" onclick="openModalGallery( {{ offset }} )"
-						data-title="{{ image | replace('gallery/b', '') | replace('/thumbnails/', ' ') | replace('.jpg', '') | replace('_', ' ') | replace('-', '#') }}">
+						<img src="{{ website.url }}{{ group.b.baseSrc }}{{ image.src }}" 
+						id="{{ offset }}" onclick="openModalGallery( {{ offset }} )" 
+						data-title="{{ image.title }}"
+						data-href="{{ image.href }}">
 					</div>
 				</div>
 			{%- endif %}
@@ -111,6 +113,15 @@ class="parallax lazyLoad">
 			Born in 1959 in Strasbourg, Marc Mengus settled in a small village in the south of Alsace.<br>
 			It is there, close to nature, quiet, far from untimely noises that he works.</p>
 			<!--<a href="">VIEW SELECTION >></a>-->
+			<h1>&nbsp;</h1>
+			<strong>Marc Mengus es un pintor expresionista abstracto.</strong>
+			<hr>
+			<p>Destaca el material y el color utilizado como material.<br>
+			Sus obras están todas marcadas por un clima que permite inspirarse en el interior de la pintura.<br>
+			Las obras no se nombran intencionadamente; ninguna influencia etimológica o semiótica debe anclar el imaginario, que debe permanecer libre.<br>
+			Nacido en 1959 en Estrasburgo, Marc Mengus se instaló en un pequeño pueblo del sur de Alsacia.<br>
+			Es allí, cerca de la naturaleza, tranquilo, lejos de los ruidos intempestivos que trabaja.</p>
+			<!--<a href="">VIEW SELECTION >></a>-->
 		</div>
 	</div>
 </div>
@@ -118,16 +129,16 @@ class="parallax lazyLoad">
 <div id="bg4" style="background-image: url('{{ website.url }}/includes/assets/images/bg4s.jpg');" 
 data-lazy-load="{{ website.url }}/includes/assets/images/bg4.jpg"
 class="parallax lazyLoad">
-	<b class="caption">"14" , 2019 - Marc Mengus</b>
+	<b class="caption">2019#14</b>
 </div>
 
 <div class="blank_container" id="contact">
 	<div class="text_only">
 		<div class="text_container">
-			<h1>Contact Me</h1>
-			<strong>INFO@MYSITE.COM / TEL: 123-456-7890</strong>
+			<strong>Marc Mengus:</strong>
+			<p>info@yoursite.com | TEL: +33 123456789</p>
 			<hr>
-			<p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you​</p>
+			<p>pcagalleryart.com | <span>photogr</span><span>aphycultureart@g</span>mail.com</p>
 			<!--<a href="">VIEW SELECTION >></a>-->
 		</div>
 	</div>

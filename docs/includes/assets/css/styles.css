@@ -335,7 +335,7 @@ footer{
 /*----------------------background----------------------*/
 .title{
 	padding: 0 20px 0 20px;
-	font: 200 50px/1.0 'Source Sans Pro', sans-serif;
+	font: 200 35px/1.0 'Source Sans Pro', sans-serif;
 	text-align: center;
 	color: #eeeeee;
 	background-color: rgba(0 , 0 , 0 , 0.1);
@@ -403,25 +403,22 @@ footer{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
+	margin-right: auto;
 }
 #purchase_link img{
-	height: 1.8rem;
+	height: 1rem;
 	padding-right: 10px;
 }
 #purchase_link p{
-	font: 300 1.8rem/0.8 'Source Sans Pro', sans-serif;
+	font: 300 1rem/0.8 'Source Sans Pro', sans-serif;
 	color: #eeeeee;
-	padding-right: 10px;
 }
 #purchase_link p:hover{
 	text-decoration: underline;
 }
 .image_title_box{
-	position: absolute;
-	right: 70px;
-	top: 10px;
-	height: 50px;
-	padding: 0 20px 0 20px;
+	margin-left: auto;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -429,7 +426,7 @@ footer{
 	background-color: rgba(0 , 0 , 0 , 0.6);
 }
 .image_title{
-	font: 300 1.8rem/0.8 'Source Sans Pro', sans-serif;
+	font: 300 1rem/0.8 'Source Sans Pro', sans-serif;
 	color: #eeeeee;
 }
 
@@ -441,7 +438,7 @@ footer{
 	justify-content: center;
 	cursor: pointer;
 
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(255,255,255,0.0);
 
 	-webkit-user-select: none; /* Safari */		
 	-moz-user-select: none; /* Firefox */
@@ -451,7 +448,7 @@ footer{
 	transition: ease-in-out 0.5s;
 }
 .button:hover{
-	background-color: rgba(126, 126, 126, 0.5);
+	background-color: rgba(126, 126, 126, 0.0);
 
 	transition: ease-in-out 0.5s;
 }
@@ -461,20 +458,36 @@ footer{
 	top: 50%;
 	transform: translateY(-50%);
 }
+.next span{
+	height: 30px;
+	width: 30px;
+	border-top: 1px solid white;
+	border-right: 1px solid white;
+	transform-origin: center;
+	transform: rotate(45deg);
+}
 .previous{
 	position: absolute;
 	left: 10px;
 	top: 50%;
 	transform: translateY(-50%);
 }
+.previous span{
+	height: 30px;
+	width: 30px;
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	transform-origin: center;
+	transform: rotate(-45deg);
+}
 .close{
 	position: absolute;
 	right: 10px;
 	top: 10px;
 }
-.button span{
+.close span{
 	font: 300 32px/1 'Baloo Tamma 2', sans-serif;
-	color: #000000;
+	color: #ffffff;
 }
 .spinner{
 	z-index: 11;
