@@ -390,7 +390,7 @@ footer{
 
 .text_bar{
 	width: 100%;
-	padding: 10px;
+	padding: 10px 10px 0 10px;
 	background-color: rgba(0 , 0 , 0 , 0.1);
 
 	display: flex;
@@ -407,7 +407,8 @@ footer{
 }
 #purchase_link img{
 	height: 1rem;
-	padding-right: 10px;
+
+	margin-right: 20px;
 }
 #purchase_link p{
 	font: 300 1rem/0.8 'Source Sans Pro', sans-serif;
@@ -431,7 +432,8 @@ footer{
 }
 
 .button{
-	height: 50px;
+	height: 50%;
+	min-height: 50px;
 	width: 50px;
 	display: flex;
 	align-items: center;
@@ -480,10 +482,23 @@ footer{
 	transform-origin: center;
 	transform: rotate(-45deg);
 }
+
 .close{
-	position: absolute;
-	right: 10px;
-	top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	margin-left: 20px;
+
+	background-color: rgba(255,255,255,0.0);
+
+	-webkit-user-select: none; /* Safari */		
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+
+	transition: ease-in-out 0.5s;
 }
 .close span{
 	font: 300 16px/1 'Baloo Tamma 2', sans-serif;
