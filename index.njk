@@ -64,20 +64,29 @@ class="parallax lazyLoad">
 			<!--<a href="">VIEW SELECTION >></a>-->
 		</div>
 		<div class="gallery">
+		{%- set imgIndex = 0 %}
 		{%- set offset = 0 %}
 		{%- for image in group.c.images %}
 			{%- if loop.index <= 9 %}
-				{%- set offset = offset + 1 %}
+				{%- set imgIndex = imgIndex + 1 %}
 				<div class="thumbnails">
 					<div class="square">
 						<img src="{{ website.url }}{{ group.c.baseSrc }}{{ image.src }}" 
-						id="{{ offset }}" onclick="openModalGallery( {{ offset }} )" 
+						id="{{ imgIndex }}" onclick="openModalGallery( {{ imgIndex }} )" 
 						data-title="{{ image.title }}"
 						data-href="{{ image.href }}">
 					</div>
 				</div>
 			{%- endif %}
 		{%- endfor %}
+		{%- if ( imgIndex + offset ) % 2 != 0 %}
+			{%- set offset = offset + 1 %}
+				<div class="thumbnails">
+					<div class="square">
+						<img src="/includes/assets/images/empty.png">
+					</div>
+				</div>
+		{%- endif %}
 		</div>
 	</div>
 </div>
@@ -93,17 +102,25 @@ class="parallax lazyLoad">
 		<div class="gallery left_container">
 		{%- for image in group.b.images %}
 			{%- if loop.index <= 9 %}
-				{%- set offset = offset + 1 %}
+				{%- set imgIndex = imgIndex + 1 %}
 				<div class="thumbnails">
 					<div class="square">
 						<img src="{{ website.url }}{{ group.b.baseSrc }}{{ image.src }}" 
-						id="{{ offset }}" onclick="openModalGallery( {{ offset }} )" 
+						id="{{ imgIndex }}" onclick="openModalGallery( {{ imgIndex }} )" 
 						data-title="{{ image.title }}"
 						data-href="{{ image.href }}">
 					</div>
 				</div>
 			{%- endif %}
 		{%- endfor %}
+		{%- if ( imgIndex + offset ) % 2 != 0 %}
+			{%- set offset = offset + 1 %}
+				<div class="thumbnails">
+					<div class="square">
+						<img src="/includes/assets/images/empty.png">
+					</div>
+				</div>
+		{%- endif %}
 		</div>
 		<div class="text_container">
 			<strong>Marc Mengus is an Abstract Expressionist Painter.</strong>
@@ -158,5 +175,5 @@ class="parallax lazyLoad">
 			console.log("url(" + array[i].dataset.lazyLoad + ")");
 		}
 	}
-	document.onload = lazyLoad();
+	document.onload = setTimeout( lazyLoad() , 800);
 </script>
