@@ -5,8 +5,8 @@ lang: fr
 image: ""
 description: ""
 ---
-<div style="background-image: url('{{ website.url }}/includes/assets/images/bg1s.jpg'); height: 100vh; padding: 65px 0 65px 0;"
-data-lazy-load="{{ website.url }}/includes/assets/images/bg1.jpg" class="parallax lazyLoad">
+<div style="background-image: url('{{ website.url }}/includes/assets/images/bg1s.jpg'); height: 100vh;" class="parallax">
+<div style="background-image: url('{{ website.url }}/includes/assets/images/bg1.jpg');" class="lazyloading"></div>
 	<h1 class="title">Marc Mengus,<br> Artiste Peintre Français</h1>
 	<b class="caption">2020#15 , Acrylique sur Toile de Lin</b>
 </div>
@@ -44,9 +44,8 @@ data-lazy-load="{{ website.url }}/includes/assets/images/bg1.jpg" class="paralla
 	</div>
 </div>
 
-<div id="bg2" style="background-image: url('{{ website.url }}/includes/assets/images/bg2s.jpg');" 
-data-lazy-load="{{ website.url }}/includes/assets/images/bg2.jpg"
-class="parallax lazyLoad">
+<div id="bg2" style="background-image: url('{{ website.url }}/includes/assets/images/bg2s.jpg');" class="parallax">
+<div style="background-image: url('{{ website.url }}/includes/assets/images/bg2.jpg');" class="lazyloading"></div>
 	<b class="caption">"Convergence" , 1952 - Jackson Pollock</b>
 </div>
 <!--1-->
@@ -91,9 +90,8 @@ class="parallax lazyLoad">
 	</div>
 </div>
 
-<div id="bg3" style="background-image: url('{{ website.url }}/includes/assets/images/bg3s.jpg');" 
-data-lazy-load="{{ website.url }}/includes/assets/images/bg3.jpg"
-class="parallax lazyLoad">
+<div id="bg3" style="background-image: url('{{ website.url }}/includes/assets/images/bg3s.jpg');" class="parallax">
+<div style="background-image: url('{{ website.url }}/includes/assets/images/bg3.jpg');" class="lazyloading"></div>
 	<b class="caption">2020#32 , Acrylique sur Toile de Lin</b>
 </div>
 <!--2-->
@@ -147,9 +145,8 @@ class="parallax lazyLoad">
 	</div>
 </div>
 
-<div id="bg4" style="background-image: url('{{ website.url }}/includes/assets/images/bg4s.jpg');" 
-data-lazy-load="{{ website.url }}/includes/assets/images/bg4.jpg"
-class="parallax lazyLoad">
+<div id="bg4" style="background-image: url('{{ website.url }}/includes/assets/images/bg4s.jpg');" class="parallax">
+<div style="background-image: url('{{ website.url }}/includes/assets/images/bg4.jpg');" class="lazyloading"></div>
 	<b class="caption">2019#14 , Acrylique sur Toile de Lin</b>
 </div>
 
@@ -168,12 +165,15 @@ class="parallax lazyLoad">
 
 
 <script>
+
+	addEventListener( 'load' , function(event) {
+		lazyLoad();
+	});
 	function lazyLoad(){
-		let array = document.getElementsByClassName('lazyLoad');
+		let array = document.getElementsByClassName('lazyloading');
 		for (i = 0; i < array.length; i++) {
-			array[i].style.backgroundImage = "url(" + array[i].dataset.lazyLoad + ")";
-			console.log("url(" + array[i].dataset.lazyLoad + ")");
+			array[i].style.opacity = "1.0";
 		}
 	}
-	document.onload = setTimeout( lazyLoad() , 800);
+
 </script>
