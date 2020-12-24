@@ -20,6 +20,7 @@ html {
 
 /* <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap" rel="stylesheet"> */
 /* font-family: 'Source Sans Pro', sans-serif; */
+
 .white{
 	color: #eeeeee;
 }
@@ -73,6 +74,7 @@ body{
 }
 
 /*----------------------components----------------------*/
+
 /*----------------------header----------------------*/
 header{
 	z-index: 10;
@@ -103,6 +105,14 @@ header{
 #navbar ul li a{
 	color: #eeeeee;
 }
+.title{
+	padding: 5px 20px 5px 20px;
+	font: 200 35px/1.0 'Source Sans Pro', sans-serif;
+	text-align: center;
+	color: #eeeeee;
+	background-color: rgba(0 , 0 , 0 , 0.2);
+}
+
 /*----------------------footer----------------------*/
 footer{
 	height: 40px;
@@ -114,8 +124,7 @@ footer{
 	align-items: center;
 }
 
-/*----------------------basic components----------------------*/
-
+/*----------------------simple components----------------------*/
 .parallax {
 	/* set image with : background-image: url("img_parallax.jpg"); */
 	width: 100%;
@@ -182,7 +191,7 @@ footer{
 	align-items: center;
 	justify-content: space-evenly;
 }
-.text_container p,.text_container b,.text_container small,.text_container big,.text_container h1,.text_container strong,.text_container span{
+.text_container b,.text_container small,.text_container big,.text_container h1,.text_container strong,.text_container span{
 	text-align: center;
 }
 .text_container p{
@@ -200,6 +209,7 @@ footer{
 	justify-content: space-between;
 
 }
+
 .thumbnails{
 	/* height: 200px; */
 	/* width: 200px; */
@@ -230,7 +240,7 @@ footer{
 	transition: all 0.3s ease-in-out;
 }
 .thumbnails:hover{
-	filter: brightness(0.5);
+	filter: brightness(0.8);
 	transition: all 0.3s ease-in-out;
 }
 .thumbnails:hover img{
@@ -239,14 +249,13 @@ footer{
 	transition: all 0.3s ease-in-out;
 }
 
-
-.big_gallery{
+/* .big_gallery{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: flex-start;
-}
+} */
 /*----------------------composed components----------------------*/
 .text_and_text{
 	width: 100%;
@@ -266,7 +275,7 @@ footer{
 .text_and_text .text_container :nth-last-child(1){
 	margin-top: auto;
 }
-
+/* 
 .text_and_image{
 	width: 100%;
 	display: flex;
@@ -274,7 +283,7 @@ footer{
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
-}/*         todo: change the no wrap for responsive design */
+}/*         todo: change the no wrap for responsive design 
 .text_and_image div:nth-child(1){
 	margin-right: 5%;
 }
@@ -287,7 +296,7 @@ footer{
 }
 .text_and_image .text_container{
 	flex: 55%;
-}
+} */
 
 .text_and_gallery{
 	width: 100%;
@@ -347,15 +356,6 @@ footer{
 }
 .text_only .text_container{
 	max-width: 900px;
-}
-
-/*----------------------background----------------------*/
-.title{
-	padding: 5px 20px 5px 20px;
-	font: 200 35px/1.0 'Source Sans Pro', sans-serif;
-	text-align: center;
-	color: #eeeeee;
-	background-color: rgba(0 , 0 , 0 , 0.2);
 }
 
 /*----------------------modal----------------------*/

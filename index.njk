@@ -5,8 +5,9 @@ lang: fr
 image: ""
 description: ""
 ---
+
 <div style="background-image: url('{{ website.url }}/includes/assets/images/bg1s.jpg'); height: 100vh;" class="parallax">
-<div style="background-image: url('{{ website.url }}/includes/assets/images/bg1.jpg');" class="lazyloading"></div>
+	<div style="background-image: url('{{ website.url }}/includes/assets/images/bg1.jpg');" class="lazyloading"></div>
 	<h1 class="title">Marc Mengus,<br> Artiste Peintre Français</h1>
 	<b class="caption">2020#15 , Acrylique sur Toile de Lin</b>
 </div>
@@ -45,10 +46,12 @@ description: ""
 </div>
 
 <div id="bg2" style="background-image: url('{{ website.url }}/includes/assets/images/bg2s.jpg');" class="parallax">
-<div style="background-image: url('{{ website.url }}/includes/assets/images/bg2.jpg');" class="lazyloading"></div>
+	<div style="background-image: url('{{ website.url }}/includes/assets/images/bg2.jpg');" class="lazyloading"></div>
 	<b class="caption">"Convergence" , 1952 - Jackson Pollock</b>
 </div>
-<!--1-->
+{%- set imgIndex = 0 %}
+{%- set offset = 0 %}
+<!--1cbd dcb-->
 <div class="blank_container" id="gallery1">
 	<div class="text_and_gallery">
 		<div class="text_container left_container">
@@ -63,14 +66,12 @@ description: ""
 			<!--<a href="">VIEW SELECTION >></a>-->
 		</div>
 		<div class="gallery">
-		{%- set imgIndex = 0 %}
-		{%- set offset = 0 %}
-		{%- for image in group.c.images %}
+		{%- for image in group.d.images %}
 			{%- if loop.index <= 9 %}
 				{%- set imgIndex = imgIndex + 1 %}
 				<div class="thumbnails">
 					<div class="square">
-						<img src="{{ website.url }}{{ group.c.baseSrc }}{{ image.src }}" 
+						<img src="{{ website.url }}{{ group.d.baseSrc }}{{ image.src }}" 
 						id="{{ imgIndex }}" onclick="openModalGallery( {{ imgIndex }} )" 
 						data-title="{{ image.title }}"
 						data-href="{{ image.href }}">
@@ -91,19 +92,19 @@ description: ""
 </div>
 
 <div id="bg3" style="background-image: url('{{ website.url }}/includes/assets/images/bg3s.jpg');" class="parallax">
-<div style="background-image: url('{{ website.url }}/includes/assets/images/bg3.jpg');" class="lazyloading"></div>
+	<div style="background-image: url('{{ website.url }}/includes/assets/images/bg3.jpg');" class="lazyloading"></div>
 	<b class="caption">2020#32 , Acrylique sur Toile de Lin</b>
 </div>
 <!--2-->
 <div class="blank_container" id="gallery2">
 	<div class="text_and_gallery">
 		<div class="gallery left_container">
-		{%- for image in group.b.images %}
+		{%- for image in group.c.images %}
 			{%- if loop.index <= 9 %}
 				{%- set imgIndex = imgIndex + 1 %}
 				<div class="thumbnails">
 					<div class="square">
-						<img src="{{ website.url }}{{ group.b.baseSrc }}{{ image.src }}" 
+						<img src="{{ website.url }}{{ group.c.baseSrc }}{{ image.src }}" 
 						id="{{ imgIndex }}" onclick="openModalGallery( {{ imgIndex }} )" 
 						data-title="{{ image.title }}"
 						data-href="{{ image.href }}">
@@ -130,7 +131,29 @@ description: ""
 			Born in 1959 in Strasbourg, Marc Mengus settled in a small village in the south of Alsace.<br>
 			It is there, close to nature, quiet, far from untimely noises that he works.</p>
 			<!--<a href="">VIEW SELECTION >></a>-->
-			<h1>&nbsp;</h1>
+			{# <h1>&nbsp;</h1>
+			<strong>Marc Mengus es un Pintor Expresionista Abstracto.</strong>
+			<hr>
+			<p>
+			Utiliza la Pintura y la Textura de Arena Negra, Hoja de oro, ... para construir sus obras.<br>
+			Enfatiza el material y el color,..., sugiere un movimiento.<br>
+			Sus obras están todas marcadas por un clima que deja inspirarse.<br>
+			Las obras intencionalmente no llevan nombres; ninguna influencia etimológica o semiótica debe anclar la imaginación, que debe permanecer libre.<br>
+			Nacido en 1959 en Estrasburgo, Marc Mengus se estableció en un pequeño pueblo en el sur de Alsacia.<br>
+			Es allí, cerca de la naturaleza, tranquilo, lejos del ruido no deseado que él trabaja.</p>
+			<!--<a href="">VIEW SELECTION >></a>--> #}
+		</div>
+	</div>
+</div>
+
+<div id="bg4" style="background-image: url('{{ website.url }}/includes/assets/images/bg4s.jpg');" class="parallax">
+	<div style="background-image: url('{{ website.url }}/includes/assets/images/bg4.jpg');" class="lazyloading"></div>
+	<b class="caption">2019#14 , Acrylique sur Toile de Lin</b>
+</div>
+<!--3-->
+<div class="blank_container" id="gallery1">
+	<div class="text_and_gallery">
+		<div class="text_container left_container">
 			<strong>Marc Mengus es un Pintor Expresionista Abstracto.</strong>
 			<hr>
 			<p>
@@ -142,12 +165,30 @@ description: ""
 			Es allí, cerca de la naturaleza, tranquilo, lejos del ruido no deseado que él trabaja.</p>
 			<!--<a href="">VIEW SELECTION >></a>-->
 		</div>
+		<div class="gallery">
+		{%- for image in group.b.images %}
+			{%- if loop.index <= 90 %}
+				{%- set imgIndex = imgIndex + 1 %}
+				<div class="thumbnails">
+					<div class="square">
+						<img src="{{ website.url }}{{ group.b.baseSrc }}{{ image.src }}" 
+						id="{{ imgIndex }}" onclick="openModalGallery( {{ imgIndex }} )" 
+						data-title="{{ image.title }}"
+						data-href="{{ image.href }}">
+					</div>
+				</div>
+			{%- endif %}
+		{%- endfor %}
+		{%- if ( imgIndex + offset ) % 2 != 0 %}
+			{%- set offset = offset + 1 %}
+				<div class="thumbnails">
+					<div class="square">
+						<img src="/includes/assets/images/empty.png">
+					</div>
+				</div>
+		{%- endif %}
+		</div>
 	</div>
-</div>
-
-<div id="bg4" style="background-image: url('{{ website.url }}/includes/assets/images/bg4s.jpg');" class="parallax">
-<div style="background-image: url('{{ website.url }}/includes/assets/images/bg4.jpg');" class="lazyloading"></div>
-	<b class="caption">2019#14 , Acrylique sur Toile de Lin</b>
 </div>
 
 <div class="blank_container" id="contact">
@@ -164,16 +205,33 @@ description: ""
 </div>
 
 
-<script>
+ <script>
 
 	addEventListener( 'load' , function(event) {
 		lazyLoad();
 	});
-	function lazyLoad(){
+
+	function lazyLoad()
+	{
 		let array = document.getElementsByClassName('lazyloading');
-		for (i = 0; i < array.length; i++) {
-			array[i].style.opacity = "1.0";
+		for (i = 0; i < array.length; i++) 
+		{
+		array[i].style.opacity = "1.0";
 		}
 	}
+	//let array = document.getElementsByClassName('lazyloading');
+	//for (i = 0; i < array.length; i++) 
+	//{
+	//	array[i].addEventListener( 'load' , function(event)
+	//	{
+	//	onload =this.style.opacity = "1.0";
+	//	}
+	//	);
+	//	if ( array[i].complete == true )
+	//	{
+	//		array[i].style.opacity = "1.0";
+	//	}
+	//}
 
 </script>
+

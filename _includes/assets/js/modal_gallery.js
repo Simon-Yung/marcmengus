@@ -1,7 +1,7 @@
 
 // Get the gallery by id
 const gallery = document.getElementById('gallery');
-const numberOfImage = document.getElementsByClassName('thumbnails').length;
+const numberOfImage = document.getElementsByClassName('thumbnails').length - 1;
 var currentImage;
 var modalIsOpen = false;
 
