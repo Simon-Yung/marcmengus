@@ -39,5 +39,5 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy({ "gallery": "gallery" });
 	eleventyConfig.addPassthroughCopy({ "favicon.ico": "favicon.ico" });
 	eleventyConfig.addPassthroughCopy({ "favicon.png": "favicon.png" });
-
+	eleventyConfig.addPassthroughCopy({ "404.html": "404.html" });
 };

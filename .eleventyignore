@@ -4,3 +4,4 @@ node_modules
 docs
 gallery/**/larges/*.jpg
 gallery/**/thumbnails/*.jpg
+404.html
